@@ -35,6 +35,7 @@ public class StockList{
         stock_list_ko = SearchStockInKoList(stock_str);
         // 2. If there is result, then search symbols
         int num = stock_list_ko.size();
+        //0816 TEST COMMIT
         if(num > 0){
             String symbols = "";
             for(StockData stock : stock_list_ko){
