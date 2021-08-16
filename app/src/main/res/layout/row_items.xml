@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:paddingTop="7dp"
+            android:text="Symbol" />
+
+        <TextView
+            android:id="@+id/instrumnet"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="0dp"
+            android:paddingTop="12dp"
+            android:text="instrumnet"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/exchangename"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginLeft="0dp"
+            android:paddingTop="12dp"
+            android:text="exchangename"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/currentPrice"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="300dp"
+            android:layout_marginLeft="0dp"
+            android:paddingTop="7dp"
+            android:text="CurrentPrice" />
+
+        <TextView
+            android:id="@+id/percent"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/currentPrice"
+            android:layout_marginStart="320dp"
+            android:layout_marginLeft="0dp"
+            android:paddingTop="7dp"
+            android:text="Percent"
+            android:textSize="8sp" />
+<!--        <TextView-->
+<!--            android:id="@+id/email"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="250dp"-->
+<!--            android:paddingTop="2dp"-->
+<!--            android:text="Emails" />-->
+    </RelativeLayout>
+
+</LinearLayout>

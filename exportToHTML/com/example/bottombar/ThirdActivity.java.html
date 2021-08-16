@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>ThirdActivity.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #0033b3;}
+.s1 { color: #080808;}
+.s2 { color: #067d17;}
+.s3 { color: #8c8c8c; font-style: italic;}
+.s4 { color: #1750eb;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+ThirdActivity.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.example.bottombar;</span>
+
+<span class="s0">import </span><span class="s1">androidx.appcompat.app.AppCompatActivity;</span>
+
+<span class="s0">import </span><span class="s1">android.content.Intent;</span>
+<span class="s0">import </span><span class="s1">android.os.Bundle;</span>
+<span class="s0">import </span><span class="s1">android.widget.ImageView;</span>
+<span class="s0">import </span><span class="s1">android.widget.TextView;</span>
+
+<span class="s0">import </span><span class="s1">org.w3c.dom.Text;</span>
+
+<span class="s0">import </span><span class="s1">java.util.ArrayList;</span>
+
+<span class="s0">public class </span><span class="s1">ThirdActivity </span><span class="s0">extends </span><span class="s1">AppCompatActivity {</span>
+
+    <span class="s1">ImageView imageView;</span>
+    <span class="s1">TextView textViewName;</span>
+    <span class="s1">TextView textViewStock;</span>
+    <span class="s1">TextView textViewStockName;</span>
+    <span class="s1">ItemsModel itemsModel;</span>
+
+    <span class="s1">Object result;</span>
+    <span class="s1">@Override</span>
+    <span class="s0">protected void </span><span class="s1">onCreate(Bundle savedInstanceState) {</span>
+        <span class="s0">super</span><span class="s1">.onCreate(savedInstanceState);</span>
+        <span class="s1">setContentView(R.layout.activity_third);</span>
+
+        <span class="s1">imageView = findViewById(R.id.imageView);</span>
+        <span class="s1">textViewName = findViewById(R.id.textViewName);</span>
+        <span class="s1">textViewStock = findViewById(R.id.textViewStock);</span>
+        <span class="s1">textViewStockName = findViewById(R.id.textViewStockName);</span>
+
+        <span class="s1">Intent intent = getIntent();</span>
+        <span class="s0">if</span><span class="s1">(intent.getExtras() != </span><span class="s0">null</span><span class="s1">){</span>
+            <span class="s1">itemsModel = (ItemsModel) intent.getSerializableExtra(</span><span class="s2">&quot;items&quot;</span><span class="s1">);</span>
+            <span class="s1">ArrayList&lt;String&gt; result = (ArrayList) intent.getSerializableExtra(</span><span class="s2">&quot;return&quot;</span><span class="s1">);</span>
+            <span class="s1">System.out.println(</span><span class="s2">&quot;result&quot; </span><span class="s1">+</span><span class="s2">&quot; &quot; </span><span class="s1">+ result);</span>
+            <span class="s1">imageView.setImageResource(itemsModel.getImages());</span>
+            <span class="s1">textViewName.setText(itemsModel.getName());</span>
+            <span class="s3">//textViewStock.setText(itemsModel.getEmail());</span>
+            <span class="s1">textViewStock.setText(result.get(</span><span class="s4">0</span><span class="s1">));</span>
+            <span class="s1">textViewStockName.setText(result.get(</span><span class="s4">1</span><span class="s1">));</span>
+
+        <span class="s1">}</span>
+
+
+
+    <span class="s1">}</span>
+<span class="s1">}</span></pre>
+</body>
+</html>
